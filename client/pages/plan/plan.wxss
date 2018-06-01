@@ -1,0 +1,7 @@
+/* pages/plan/plan.wxss */
+@import "plan-item/plan-item-tpl.wxss";
+@import "../../weui.wxss";
+
+.plan-add {
+  margin: 200rpx 100rpx;
+}

@@ -1,0 +1,62 @@
+.plan-container {
+  margin:20rpx;
+  background-color:#fff;
+  border: 1px solid #ededed;
+  padding-bottom: 5px;
+}
+
+.plan-img-date {
+  flex-direction:row;
+  display:flex;
+  margin:20rpx;
+}
+
+.plan-img-date image{
+  width: 200rpx;
+  height: 300rpx;
+}
+
+.plan-date {
+  flex-direction:column;
+  display:flex;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #7F8389;
+
+}
+
+.plan-title {
+  font-size: 40rpx;
+  color: #000;
+}
+
+.plan-button-list {
+  display: inline-block;
+  align-items: center;
+}
+
+.plan-button {
+  margin-right: 5rpx;
+}
+
+
+.plan-change-schedule {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.plan-schedule-text {
+  margin-right: 15rpx;
+}
+
+.refresh-btn {
+  color: #3cc51f;
+}
+
+.refresh-btn:active {
+  color: #52a341;
+}
+/* .weui-vcode-btn,.weui-vcode-img{margin-left:5px;height:2.58823529em;vertical-align:middle}
+.weui-vcode-btn{display:inline-block;padding:0 .6em 0 .7em;border-left:1px solid #e5e5e5;line-height:2.58823529em;font-size:17px;color:#3cc51f;white-space:nowrap}
+.weui-vcode-btn:active{color:#52a341} */

@@ -1,0 +1,59 @@
+{
+
+  "pages":[
+    "pages/plan/plan",
+    "pages/plan/plan-detail/plan-detail",
+    "pages/plan/plan-add/plan-add",
+    "pages/book/book",
+    "pages/book/book-detail/book-detail",
+    "pages/book/book-rank/book-rank",
+    "pages/note/note",
+    "pages/note/note-add/note-add",
+    "pages/friend/friend",
+    "pages/friend/friend-detail/friend-detail",
+    "pages/friend/friend-rank/friend-rank",
+    "pages/setting/setting",
+    "pages/index/index",
+    "pages/addCgi/addCgi"
+  ],
+  "window":{
+    "backgroundColor":"#F6F6F6",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "Reading Plans",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#4A6141",
+    "color": "#333",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/plan/plan",
+        "text": "Plan",
+        "iconPath": "images/icon/icon-plan.png",
+        "selectedIconPath": "images/icon/icon-plan.png"
+      },
+      {
+        "pagePath": "pages/book/book",
+        "text": "Book",
+        "iconPath": "images/icon/icon-book.png",
+        "selectedIconPath": "images/icon/icon-book.png"
+      },
+      {
+        "pagePath": "pages/friend/friend",
+        "text": "Friends",
+        "iconPath": "images/icon/icon-friend.png",
+        "selectedIconPath": "images/icon/icon-friend.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "Setting",
+        "iconPath": "images/icon/icon-setting.png",
+        "selectedIconPath": "images/icon/icon-setting.png"
+      }
+    ]
+  }
+}
