@@ -11,7 +11,7 @@ class DBNote {
     var NotesData = this.getAllNoteData();
     var len = NotesData.length;
     for (var i = 0; i < len; i++) {
-      if (NotesData[i].NoteId == this.NoteId) {
+      if (NotesData[i].noteId == this.NoteId) {
         return {
           index: i,
           data: NotesData[i]
@@ -24,7 +24,7 @@ class DBNote {
     var NotesData = this.getAllNoteData();
     var len = NotesData.length;
     for (var i = 0; i < len; i++) {
-      if (NotesData[i].NoteId == id) {
+      if (NotesData[i].noteId == id) {
         return {
           index: i,
           data: NotesData[i]
@@ -62,10 +62,38 @@ class DBNote {
     if (flag < 0) {
       return 1;
     } else if (flag > 0) {
-      return -1
+      return -1;
     } else {
       return 0;
     }
+  }
+
+  //将新笔记存入storage.NoteList
+  updateNewNote(note) {
+    var allNoteData = this.getAllNoteData();
+    allNoteData.unshift(note);
+    this.execSetStorageSync(allNoteData);
+  }
+
+  //将新笔记存入storage.NoteList
+  updateChangeNote(noteNew) {
+    var allNoteData = this.getAllNoteData();
+    var itemData = this.getNoteItemById(noteNew.noteId);
+    var noteData = itemData.data;
+    allNoteData[itemData.index] = noteNew;
+    this.execSetStorageSync(allNoteData);
+  }
+
+  //从storage删除笔记
+  deleteNote(id) {
+    var itemData = this.getNoteItemById(id),
+      noteData = itemData.data,
+      allNoteData = this.getAllNoteData();
+    for (var i = itemData.index; i < allNoteData.length; i++) {
+      allNoteData[i] = allNoteData[i + 1];
+    }
+    allNoteData.length--;
+    this.execSetStorageSync(allNoteData);
   }
 
   /*得到全部文章信息*/

@@ -8,7 +8,7 @@
             <view class="weui-label">书名</view>
         </view>
         <view class="weui-cell__bd">
-            <input class="weui-input" placeholder="请输入书名" />
+            <input class="weui-input" placeholder="请输入书名" bindinput="inputName" value='{{plan.bookName}}'/>
         </view>
         <view class="weui-cell__ft">
             <view class="weui-vcode-btn">前往书城选择</view>
@@ -20,7 +20,7 @@
             <view class="weui-label">页数</view>
         </view>
         <view class="weui-cell__bd">
-            <input class="weui-input" placeholder="请输入书籍页数"/>
+            <input class="weui-input" placeholder="请输入书籍页数" type="number" bindinput="inputPage" value='{{plan.pagesTotal}}'/>
         </view>
     </view>
 
@@ -29,7 +29,7 @@
             <view class="weui-label">价格</view>
         </view>
         <view class="weui-cell__bd">
-            <input class="weui-input" placeholder="请输入购书价格"/>
+            <input class="weui-input" placeholder="请输入购书价格" type="digit" bindinput="inputPrice" value='{{plan.price}}'/>
         </view>
     </view>
     
@@ -49,7 +49,7 @@
             <view class="weui-label">结束日期</view>
         </view>
         <view class="weui-cell__bd">
-            <picker mode="date" value="{{plan.dateFinish}}" start="2015-09-01" end="2025-12-01" bindchange="bindDateChangeStart">
+            <picker mode="date" value="{{plan.dateFinish}}" start="{{plan.dateStart}}" end="2025-12-01" bindchange="bindDateChangeFinish">
                 <view class="weui-input">{{plan.dateFinish}}</view>
             </picker>
         </view>
@@ -62,9 +62,9 @@
   <view class="weui-cells__title">隐私</view>
   <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_switch">
-          <view class="weui-cell__bd">是否公开</view>
+          <view class="weui-cell__bd">公开给好友</view>
           <view class="weui-cell__ft">
-              <switch checked />
+              <switch checked="{{!plan.isPrivate}}" bindchange="switchChangePrivacy"/>
           </view>
       </view>
   </view>
@@ -75,17 +75,17 @@
   <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell">
           <view class="weui-cell__bd">
-              <textarea class="weui-textarea" placeholder="请输入关于计划的描述" style="height: 3.3em" />
-              <view class="weui-textarea-counter">0/200</view>
+              <textarea class="weui-textarea" placeholder="请输入关于计划的描述" style="height: 3.3em" bindinput="inputDescription" value='{{plan.description}}'/>
+              <view class="weui-textarea-counter">{{textNum}}/200</view>
           </view>
       </view>
   </view>
 
-  <view class="plan-add-confirm">
+  <view class="plan-add-confirm" hidden='{{changePlan}}'>
       <button class="weui-btn" type="primary" catchtap="onTapToConfirm">添加</button>
   </view>
-
-  <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
-      <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+  <view class="plan-add-confirm" hidden='{{!changePlan}}'>
+      <button class="weui-btn" type="primary" catchtap="onTapToConfirmChange">修改</button>
   </view>
+  
 </view>

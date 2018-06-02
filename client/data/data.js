@@ -3,6 +3,7 @@
 //计划列表
 var planList = [
   {
+    userId: "",
     planId: 1,
     isbn13: "9787505715660",
     bookImgUrl: "https://img3.doubanio.com\/mpic\/s1001902.jpg",
@@ -12,9 +13,11 @@ var planList = [
     pagesFinished: "11",
     pagesTotal: "111",
     description: "书中以一位飞行员作为故事叙述者，讲述了小王子从自己星球出发前往地球的过程中，所经历的各种历险。作者以小王子的孩子式的眼光，透视出成人的空虚、盲目，愚妄和死板教条，用浅显天真的语言写出了人类的孤独寂寞、没有根基随风流浪的命运。同时，也表达出作者对金钱关系的批判，对真善美的讴歌。",
+    price: "",
     isPrivate: false,
   },
   {
+    userId: "",
     planId: 2,
     isbn13: "9787505715660",
     bookImgUrl: "https://img3.doubanio.com\/mpic\/s1001902.jpg",
@@ -24,9 +27,11 @@ var planList = [
     pagesFinished: "11",
     pagesTotal: "111",
     description: "书中以一位飞行员作为故事叙述者，讲述了小王子从自己星球出发前往地球的过程中，所经历的各种历险。作者以小王子的孩子式的眼光，透视出成人的空虚、盲目，愚妄和死板教条，用浅显天真的语言写出了人类的孤独寂寞、没有根基随风流浪的命运。同时，也表达出作者对金钱关系的批判，对真善美的讴歌。",
+    price: "",
     isPrivate: false,
   },
   {
+    userId: "",
     planId: 3,
     isbn13: "9787505715660",
     bookImgUrl: "https://img3.doubanio.com\/mpic\/s1001902.jpg",
@@ -36,6 +41,7 @@ var planList = [
     pagesFinished: "11",
     pagesTotal: "111",
     description: "书中以一位飞行员作为故事叙述者，讲述了小王子从自己星球出发前往地球的过程中，所经历的各种历险。作者以小王子的孩子式的眼光，透视出成人的空虚、盲目，愚妄和死板教条，用浅显天真的语言写出了人类的孤独寂寞、没有根基随风流浪的命运。同时，也表达出作者对金钱关系的批判，对真善美的讴歌。",
+    price: "",
     isPrivate: false,
   }
 ]

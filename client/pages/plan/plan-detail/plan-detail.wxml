@@ -19,7 +19,7 @@
 
       <view class="plan-button-list">
         
-        <button class="weui-btn plan-detail-button" type="primary" plain="true" size="mini" catchtap="onTapToDetail" data-plan-id="{{plan.planId}}">更改计划</button>
+        <button class="weui-btn plan-detail-button" type="primary" plain="true" size="mini" catchtap="onTapToChangePlan" data-plan-id="{{plan.planId}}">更改计划</button>
         <button class="weui-btn plan-detail-button" type="warn" plain="true" size="mini" bindtap="openConfirm" data-plan-id="{{plan.planId}}">删除计划</button>
       </view>
       
@@ -48,8 +48,10 @@
           <text class="page__desc">{{item.data.content}}</text>
           <view class="page__desc note-time">
             <text class='note-time-text'>{{item.data.createTime}}</text>
-            <text class='note-change'>修改</text>
-            <text class='note-delete'>删除</text>
+            <view>
+              <text class='note-change' catchtap="onTapToChange" data-note-id="{{item.data.noteId}}">修改</text>
+              <text class='note-delete' catchtap="onTapToDelete" data-note-id="{{item.data.noteId}}">删除</text>
+            </view>
           </view>
         </view>
       </block>

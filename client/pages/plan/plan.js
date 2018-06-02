@@ -58,6 +58,12 @@ Page({
           })
           that.dbPlan.deletePlan(planId);
         }
+        //显示操作结果
+        wx.showToast({
+          title: "删除成功",
+          duration: 1000,
+          icon: "success"
+        })
       }
     });
   },

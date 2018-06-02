@@ -77,6 +77,22 @@ class DBPlan {
     return planData;
   }
 
+  //新建计划
+  updateNewPlan(Plan) {
+    var allPlanData = this.getAllPlanData();
+    allPlanData.unshift(Plan);
+    this.execSetStorageSync(allPlanData);
+  }
+
+  //修改计划
+  updateChangedPlan(planChanged) {
+    var itemData = this.getPlanItemById(planChanged.planId),
+      planData = itemData.data,
+      allPlanData = this.getAllPlanData();
+    allPlanData[itemData.index] = planChanged;
+    this.execSetStorageSync(allPlanData);
+  }
+
 };
 
 export { DBPlan }
